@@ -32,7 +32,7 @@ draft: false                        # false = publish, true = draft
   </div>
   <!-- Ảnh bên phải -->
   <img 
-    src="/public/images/sum1.png" 
+    src="/images/list.png" 
     alt="Ảnh minh họa"
     style="width: 150px; height: auto; margin-left: 16px; border-radius: 8px;"
   />
