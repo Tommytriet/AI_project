@@ -32,7 +32,7 @@ draft: false                        # false = publish, true = draft
   </div>
   <!-- Ảnh bên phải -->
   <img 
-    src="/public/images/list.png" 
+    src="/src/assets/images/new-avatar.png" 
     alt="Ảnh minh họa"
     style="width: 150px; height: auto; margin-left: 16px; border-radius: 8px;"
   />
