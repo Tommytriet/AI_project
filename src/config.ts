@@ -52,7 +52,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: '/public/images/a2.jpg', // New AI logo
+	avatar: '/images/a2.jpg', // New AI logo
 	name: 'AI Blog Pro Team',
 	bio: 'AI Journey of AIO 2025 - Khám phá hành trình trí tuệ nhân tạo, từ những bước đầu đến tương lai công nghệ.',
 	links: [
