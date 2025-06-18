@@ -32,7 +32,7 @@ draft: false                        # false = publish, true = draft
   </div>
   <!-- Ảnh bên phải -->
   <img 
-    src="/content/posts/images/ai-development-stack.png" 
+    src="public/images/sum1.png" 
     alt="Ảnh minh họa"
     style="width: 150px; height: auto; margin-left: 16px; border-radius: 8px;"
   />
