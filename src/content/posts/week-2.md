@@ -104,7 +104,7 @@ print(data[1:-3]) # [5, 6]
 <!-- Ảnh minh họa dưới phần List Method -->
 <div style="text-align: center; margin-top: 1em;">
   <img 
-    src="/public/images/list-methods.png" 
+    src="/AI_project/images/list-methods.png" 
     alt="Ảnh minh họa các phương thức của list"
     style="max-width: 100%; height: auto; border-radius: 10px;"
   />
@@ -246,7 +246,7 @@ for index, value in enumerate(data,7): #-->  8 1
 <!-- Ảnh minh họa dưới phần List Method -->
 <div style="text-align: center; margin-top: 1em;">
   <img 
-    src="/public/images/sum1.png" 
+    src="/AI_project/images/sum1.png" 
     alt="sum of even number"
     style="max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 0 auto;"
   />
@@ -257,7 +257,7 @@ for index, value in enumerate(data,7): #-->  8 1
 <!-- Ảnh minh họa dưới phần List Method -->
 <div style="text-align: center; margin-top: 1em;">
   <img 
-    src="/public/images/sum2.png" 
+    src="/AI_project/images/sum2.png" 
     alt="Dùng vòng lặp for"
     style="max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 0 auto;"
   />
@@ -281,7 +281,7 @@ print(sum_data) #--> 6 + 2 = 8
 <!-- Ảnh minh họa dưới phần List Method -->
 <div style="text-align: center; margin-top: 1em;">
   <img 
-    src="/public/images/sum3.png" 
+    src="/AI_project/images/sum3.png" 
     alt="Dùng vòng lặp for"
     style="max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 0 auto;"
   />
