@@ -1,0 +1,7 @@
+B1: Mở file astro.config
+
+B2:vd tên link của project là : https://github.com/Tommytriet/AI_project
+
+Ngay phần export default defineConfig({
+    site:Đổi tên link thành tên web github: ("https://tommytriet.github.io") --> tên miền 
+    base: ("/AI_project",) --> tên project 

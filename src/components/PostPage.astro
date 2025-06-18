@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPostUrlBySlug } from "@utils/url-utils";
+import PostCard from "./PostCard.astro";
+
+const { page } = Astro.props;
+
+// Lấy danh sách các tuần duy nhất từ dữ liệu bài viết
+const weekSet = new Set<string>();
+page.data.forEach((entry) => {
+  if (entry.data.week) {
+    weekSet.add(entry.data.week);
+  }
+});
+const weeks = Array.from(weekSet).sort(); // sắp xếp nếu muốn
+let delay = 0;
+const interval = 50;
+---
+<!-- Tự động tạo các nút tuần -->
+<div class="flex gap-2 mb-4">
+  <button onclick="filterWeek('all')" class="px-3 py-1 bg-gray-200 rounded">Tất cả</button>
+  {weeks.map((w) => (
+    <button onclick={`filterWeek('${w}')`} class="px-3 py-1 bg-gray-200 rounded">
+      {w.replace("week-", "Week ")}
+    </button>
+  ))}
+</div>
+
+<!-- Danh sách bài viết -->
+<div id="posts-wrapper" class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
+  {page.data.map((entry: CollectionEntry<"posts">) => (
+    <div class="post-wrapper" data-week={entry.data.week || "none"}>
+      <PostCard
+        entry={entry}
+        title={entry.data.title}
+        tags={entry.data.tags}
+        category={entry.data.category}
+        published={entry.data.published}
+        updated={entry.data.updated}
+        url={getPostUrlBySlug(entry.slug)}
+        image={entry.data.image}
+        description={entry.data.description}
+        draft={entry.data.draft}
+        class:list="onload-animation"
+        style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+        week={entry.data.week}
+      />
+    </div>
+  ))}
+</div>
+
+<!-- Script lọc -->
+<script is:inline>
+  function filterWeek(week) {
+    const posts = document.querySelectorAll(".post-wrapper");
+
+    posts.forEach((post) => {
+      const postWeek = post.getAttribute("data-week");
+      if (week === "all" || postWeek === week) {
+        post.style.display = "block";
+      } else {
+        post.style.display = "none";
+      }
+    });
+  }
+</script>
